@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +6,9 @@
 }
 html{
     font-size: 14px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
 }
 #container{
     max-width: 1200px;
@@ -18,19 +22,21 @@ html{
     padding: 5px 0;
 }
 #content .news{
-    padding: 10px;
     max-width: 49.99999%;
     float: left;
     text-align: justify;
     line-height: 1.5;
     font-size: 0.8rem;
 }
+#content .news:first-child{
+    padding-right:5px;
+}
 #content::after, #nav ul::after{
     content: "";
     clear: both;
     display: table;
   }
-#nav ul{
+#nav ul {
     list-style-type: none;
 
   }
@@ -39,6 +45,9 @@ html{
     float: left;
     text-align: center;
     border-right:1px dotted black;
+  }
+  #nav ul li:last-child{
+   border-right: none;
   }
   #nav ul li a{
     background-color: orange;
@@ -52,4 +61,10 @@ html{
    background-color: black;
    color: white;
    text-decoration: underline;
+  }
+  #content .news:first-child{
+    padding-right: 10px;
+  }
+  #content .news:nth-child(2){
+    padding-right: 10px;
   }
